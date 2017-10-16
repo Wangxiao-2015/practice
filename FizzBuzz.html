@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FizzBuzz问题</title>
+</head>
+<body>
+<div id="test"></div>
+</body>
+</html>
+<script type="text/javascript">
+//写一个程序打印1到100这些数字。但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，5的倍数用“Buzz”代替  
+//既是3的倍数又是5的倍数打印“FizzBuzz”
+	var test = document.getElementById("test");
+
+	for(var i=1; i<=100; i++)
+	{
+		if(i % 3 == 0 && i % 5 == 0)
+		{
+			console.log("FizzBuzz");
+		}
+		else if(i % 5 == 0)
+		{
+			console.log("Buzz");
+		}
+		else if(i % 3 == 0)
+		{
+			console.log("Fizz");
+		}
+		else
+		{
+			console.log(i);
+		}
+	}
+
+	for(var i=1; i<=100; i++)
+	{
+		if(i % 3 == 0 && i % 5 == 0)
+		{
+			test.innerHTML = test.innerHTML + "FizzBuzz<br>";
+		}
+		else if(i % 5 == 0)
+		{
+			test.innerHTML = test.innerHTML + "Buzz<br>";
+		}
+		else if(i % 3 == 0)
+		{
+			test.innerHTML = test.innerHTML + "Fizz<br>";
+		}
+		else
+		{
+			test.innerHTML = test.innerHTML + i + "<br>";
+		}
+	}
+
+	
+</script>
